@@ -34,7 +34,7 @@ import { APP_GUARD } from '@nestjs/core';
         type: 'postgres',
         url: configService.get<string>('DATABASE_URL'),
         autoLoadEntities: true,
-        synchronize: false,
+        synchronize: true,
       }),
     }),
 
