@@ -11,6 +11,9 @@ import { WalletService } from './wallet.service';
 import { JwtGuard } from '../auth/jwt.guard';
 import { TransferDto } from './dto/transfer.dto';
 
+import { ApiBearerAuth } from '@nestjs/swagger';
+
+@ApiBearerAuth()
 @Controller('wallet')
 export class WalletController {
   constructor(private readonly walletService: WalletService) {}
